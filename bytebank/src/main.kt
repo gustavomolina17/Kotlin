@@ -1,5 +1,6 @@
 fun main() {
     println("Bem vindo ao Bytebank")
+    println()
 
     val contaGustavo = Conta(titular = "Gustavo", numero = 1000)
     contaGustavo.deposita(500.0)
@@ -7,13 +8,15 @@ fun main() {
     val contaMolina = Conta(numero = 1001, titular = "Molina")
     contaMolina.deposita(800.0)
 
-    println(contaMolina.titular)
-    println(contaMolina.numero)
-    println(contaMolina.saldo)
+    println("""Titular da conta: """ + contaMolina.titular)
+    println("""Número da conta: """ + contaMolina.numero)
+    println("""Saldo da conta: """ + contaMolina.saldo)
+    println()
 
-    println(contaGustavo.titular)
-    println(contaGustavo.numero)
-    println(contaGustavo.saldo)
+    println("""Titular da conta: """ + contaGustavo.titular)
+    println("""Número da conta: """ +contaGustavo.numero)
+    println("""Saldo da conta: """ +contaGustavo.saldo)
+    println()
 
     println("Depositando na conta do Gustavo")
     contaGustavo.deposita(50.0)
@@ -80,6 +83,8 @@ class Conta(
     }
 }
 
+// Função que demonstra na prática a diferença entre trabalhar com cópia e por referência
+
 fun testaCopiasEReferencias() {
     val numeroX = 10
     var numeroY = numeroX
@@ -100,6 +105,8 @@ fun testaCopiasEReferencias() {
     println(contaJoao)
     println(contaMaria)
 }
+
+// Função responsável por testar os laços de repetição que temos no Kotlin
 
 fun testaLacos() {
     var i = 0
@@ -127,6 +134,9 @@ fun testaLacos() {
     }
 }
 
+
+// Função responsável por testar as condicionais do Kotlin
+
 fun testaCondicoes(saldo: Double) {
     if (saldo > 0.0) {
         println("conta é positiva")
@@ -135,6 +145,8 @@ fun testaCondicoes(saldo: Double) {
     } else {
         println("conta é negativa")
     }
+
+    // A estrutura abaixo com when corresponde exatamente a mesma estrutura acima do if encadeado
 
     when {
         saldo > 0.0 -> println("conta é positiva")
