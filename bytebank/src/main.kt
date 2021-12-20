@@ -20,19 +20,23 @@ fun main() {
 
     println("Depositando na conta do Gustavo")
     contaGustavo.deposita(50.0)
-    println(contaGustavo.saldo)
+    println("""Saldo após o depósito: """ + contaGustavo.saldo)
+    println()
 
     println("Depositando na conta do Molina")
     contaMolina.deposita(70.0)
-    println(contaMolina.saldo)
+    println("""Saldo após o depósito: """ + contaMolina.saldo)
+    println()
 
     println("Sacando na conta do Gustavo")
     contaGustavo.saca(250.0)
-    println(contaGustavo.saldo)
+    println("""Saldo após o saque: """ + contaGustavo.saldo)
+    println()
 
     println("Sacando na conta do Molina")
     contaMolina.saca(100.0)
-    println(contaMolina.saldo)
+    println("""Saldo após o saque: """ + contaMolina.saldo)
+    println()
 
     println("Saque em excesso na conta do Gustavo")
     contaGustavo.saca(100.0)
